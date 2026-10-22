@@ -1117,32 +1117,6 @@ a:hover {
   color: #f87171;
 }
 
-.scrav-footer .scrav-contact-item {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 14px;
-  align-items: flex-start;
-}
-
-.scrav-footer .scrav-contact-item i {
-  color: var(--scrav-primary);
-  font-size: 1.1rem;
-  margin-top: 3px;
-  flex-shrink: 0;
-}
-
-.scrav-footer .scrav-contact-item strong {
-  display: block;
-  color: #fff;
-  font-size: 0.85rem;
-}
-
-.scrav-footer .scrav-contact-item span,
-.scrav-footer .scrav-contact-item a {
-  color: #cbd5e1;
-  font-size: 0.9rem;
-}
-
 /* Default contact item in content pages (High Contrast) */
 .scrav-contact-item {
   display: flex;
@@ -1160,19 +1134,57 @@ a:hover {
 
 .scrav-contact-item strong {
   display: block;
-  color: var(--scrav-secondary) !important;
+  color: var(--scrav-secondary);
   font-size: 0.88rem;
   font-weight: 700;
 }
 
 .scrav-contact-item span,
 .scrav-contact-item a {
-  color: #334155 !important;
+  color: #334155;
   font-size: 0.95rem;
 }
 
+/* Footer Contact Items Override (Light Text on Dark Blue Footer) */
+.scrav-footer .scrav-contact-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+  align-items: flex-start;
+}
+
+.scrav-footer .scrav-contact-item i {
+  color: #38bdf8 !important;
+  font-size: 1.1rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.scrav-footer .scrav-contact-item strong {
+  display: block;
+  color: #ffffff !important;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.scrav-footer .scrav-contact-item span,
+.scrav-footer .scrav-contact-item a {
+  color: #e2e8f0 !important;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.scrav-footer .scrav-contact-item a:hover {
+  color: #38bdf8 !important;
+}
+
+.scrav-footer-hours .scrav-time {
+  color: #e2e8f0 !important;
+}
+
 .scrav-footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255,255,255,0.12);
   padding-top: 25px;
   display: flex;
   justify-content: space-between;
@@ -1180,15 +1192,15 @@ a:hover {
   flex-wrap: wrap;
   gap: 15px;
   font-size: 0.85rem;
-  color: #64748b;
+  color: #cbd5e1;
 }
 
 .scrav-footer-bottom strong {
-  color: #94a3b8;
+  color: #ffffff;
 }
 
 .scrav-legal-links a {
-  color: #94a3b8;
+  color: #cbd5e1;
 }
 
 .scrav-legal-links a:hover {
