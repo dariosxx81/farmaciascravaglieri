@@ -1117,32 +1117,6 @@ a:hover {
   color: #f87171;
 }
 
-.scrav-footer .scrav-contact-item {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 14px;
-  align-items: flex-start;
-}
-
-.scrav-footer .scrav-contact-item i {
-  color: var(--scrav-primary);
-  font-size: 1.1rem;
-  margin-top: 3px;
-  flex-shrink: 0;
-}
-
-.scrav-footer .scrav-contact-item strong {
-  display: block;
-  color: #fff;
-  font-size: 0.85rem;
-}
-
-.scrav-footer .scrav-contact-item span,
-.scrav-footer .scrav-contact-item a {
-  color: #cbd5e1;
-  font-size: 0.9rem;
-}
-
 /* Default contact item in content pages (High Contrast) */
 .scrav-contact-item {
   display: flex;
@@ -1160,19 +1134,57 @@ a:hover {
 
 .scrav-contact-item strong {
   display: block;
-  color: var(--scrav-secondary) !important;
+  color: var(--scrav-secondary);
   font-size: 0.88rem;
   font-weight: 700;
 }
 
 .scrav-contact-item span,
 .scrav-contact-item a {
-  color: #334155 !important;
+  color: #334155;
   font-size: 0.95rem;
 }
 
+/* Footer Contact Items Override (Light Text on Dark Blue Footer) */
+.scrav-footer .scrav-contact-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+  align-items: flex-start;
+}
+
+.scrav-footer .scrav-contact-item i {
+  color: #38bdf8 !important;
+  font-size: 1.1rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.scrav-footer .scrav-contact-item strong {
+  display: block;
+  color: #ffffff !important;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.scrav-footer .scrav-contact-item span,
+.scrav-footer .scrav-contact-item a {
+  color: #e2e8f0 !important;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.scrav-footer .scrav-contact-item a:hover {
+  color: #38bdf8 !important;
+}
+
+.scrav-footer-hours .scrav-time {
+  color: #e2e8f0 !important;
+}
+
 .scrav-footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255,255,255,0.12);
   padding-top: 25px;
   display: flex;
   justify-content: space-between;
@@ -1180,15 +1192,15 @@ a:hover {
   flex-wrap: wrap;
   gap: 15px;
   font-size: 0.85rem;
-  color: #64748b;
+  color: #cbd5e1;
 }
 
 .scrav-footer-bottom strong {
-  color: #94a3b8;
+  color: #ffffff;
 }
 
 .scrav-legal-links a {
-  color: #94a3b8;
+  color: #cbd5e1;
 }
 
 .scrav-legal-links a:hover {
@@ -2739,6 +2751,262 @@ body:not([class*=elementor-page-]) .site-main,
     padding: 24px 16px;
   }
   .scrav-brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+/* ==========================================================================
+   RESTYLING 11/2026: ICONA FA COUNTER, BELLEZZA, TELEDERMATOLOGIA,
+   SCREENING ASP, MARCHI IN EVIDENZA E SELEZIONI ELETTROMEDICALI
+   ========================================================================== */
+.scrav-counter-fa {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: var(--scrav-primary-light);
+  color: var(--scrav-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.55rem;
+  flex-shrink: 0;
+}
+
+/* Cabina Estetica: Servizi di Bellezza */
+.scrav-beauty-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 24px 0 32px;
+}
+
+.scrav-beauty-card {
+  background: #f8fafc;
+  border: 1px solid var(--scrav-border);
+  border-top: 3px solid var(--scrav-primary);
+  border-radius: var(--scrav-radius-md);
+  padding: 22px 22px 18px;
+}
+
+.scrav-beauty-card h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--scrav-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0 0 14px !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.scrav-beauty-card h3 i {
+  color: var(--scrav-primary);
+}
+
+.scrav-beauty-card .scrav-check-list {
+  margin: 0;
+}
+
+.scrav-beauty-card .scrav-check-list li {
+  margin-bottom: 10px;
+  font-size: 0.96rem;
+}
+
+.scrav-beauty-card .scrav-check-list li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .scrav-beauty-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Telemedicina: Sezione Teledermatologia */
+.scrav-telederm-box {
+  margin-top: 38px;
+  padding-top: 30px;
+  border-top: 2px solid var(--scrav-border);
+}
+
+.scrav-telederm-visual {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: center;
+  margin: 20px 0 24px;
+}
+
+.scrav-telederm-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--scrav-radius-md);
+  border: 1px solid var(--scrav-border);
+  box-shadow: var(--scrav-shadow-md);
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .scrav-telederm-visual {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CUP: 3 Screening gratuiti ASP Catania */
+.scrav-screening-section {
+  margin-top: 38px;
+  padding-top: 30px;
+  border-top: 2px solid var(--scrav-border);
+}
+
+.scrav-screening-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 20px;
+}
+
+.scrav-screening-card {
+  background: #f8fafc;
+  border: 1px solid var(--scrav-border);
+  border-left: 4px solid var(--scrav-primary);
+  border-radius: var(--scrav-radius-md);
+  padding: 24px 26px;
+  box-shadow: var(--scrav-shadow-sm);
+}
+
+.scrav-screening-badge {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--scrav-secondary);
+  background: var(--scrav-primary-light);
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.scrav-screening-card h3 {
+  margin: 0 0 12px !important;
+  font-size: 1.25rem;
+  color: var(--scrav-secondary);
+}
+
+.scrav-screening-card h4 {
+  margin: 16px 0 8px !important;
+  font-size: 1rem;
+  color: var(--scrav-secondary);
+}
+
+/* Dermocosmesi: Marchi principali in evidenza */
+.scrav-brands-grid.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.scrav-brands-featured {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.scrav-brand-logo-card.is-featured {
+  min-height: 138px;
+  padding: 24px 22px;
+  border-width: 2px;
+  border-color: rgba(0, 163, 200, 0.28);
+  box-shadow: var(--scrav-shadow-md);
+}
+
+.scrav-brand-logo-card.is-featured img {
+  max-height: 92px !important;
+}
+
+@media (max-width: 991px) {
+  .scrav-brands-grid.cols-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .scrav-brands-grid.cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .scrav-brands-featured {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .scrav-brand-logo-card.is-featured {
+    min-height: 112px;
+  }
+}
+
+/* Prodotti Elettromedicali: Tra le nostre selezioni */
+.scrav-selections-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.scrav-selection-card {
+  background: #ffffff;
+  border: 1px solid var(--scrav-border);
+  border-radius: 12px;
+  padding: 18px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 72, 97, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.scrav-selection-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 72, 97, 0.1);
+  border-color: rgba(0, 163, 200, 0.35);
+}
+
+.scrav-selection-img-wrap {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrav-selection-img-wrap img {
+  max-width: 100% !important;
+  max-height: 112px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block;
+}
+
+.scrav-selection-title {
+  font-family: 'Lato', 'Roboto', sans-serif;
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--scrav-secondary);
+  line-height: 1.3;
+}
+
+@media (max-width: 991px) {
+  .scrav-selections-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .scrav-selections-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
