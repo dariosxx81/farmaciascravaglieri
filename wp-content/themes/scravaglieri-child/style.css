@@ -3053,6 +3053,130 @@ body:not([class*=elementor-page-]) .site-main,
   }
 }
 
+/* Chi Siamo: Team & Pilastri Farmacia */
+.scrav-team-lead-card {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 24px;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid var(--scrav-border);
+  border-left: 4px solid var(--scrav-primary);
+  border-radius: var(--scrav-radius-md);
+  padding: 22px;
+  margin: 26px 0 24px;
+  box-shadow: var(--scrav-shadow-md);
+}
+
+.scrav-team-lead-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 8px;
+  display: block;
+}
+
+.scrav-team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin: 0 0 34px;
+}
+
+.scrav-team-card {
+  background: #ffffff;
+  border: 1px solid var(--scrav-border);
+  border-radius: var(--scrav-radius-md);
+  padding: 20px;
+  box-shadow: var(--scrav-shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.scrav-team-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.scrav-team-card h4,
+.scrav-team-lead-card h4 {
+  margin: 0 0 6px !important;
+  font-size: 1.15rem;
+  color: var(--scrav-secondary);
+}
+
+.scrav-team-role {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--scrav-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.scrav-team-bio {
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: var(--scrav-body);
+  margin: 0;
+}
+
+.scrav-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin: 24px 0 10px;
+}
+
+.scrav-pillar-card {
+  background: #f8fafc;
+  border: 1px solid var(--scrav-border);
+  border-radius: var(--scrav-radius-md);
+  overflow: hidden;
+}
+
+.scrav-pillar-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+.scrav-pillar-body {
+  padding: 20px 22px;
+}
+
+.scrav-pillar-body h3 {
+  margin: 0 0 10px !important;
+  font-size: 1.12rem;
+  color: var(--scrav-secondary);
+}
+
+.scrav-pillar-body p {
+  font-size: 0.93rem;
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+
+.scrav-pillar-body p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .scrav-team-lead-card,
+  .scrav-team-grid,
+  .scrav-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 
