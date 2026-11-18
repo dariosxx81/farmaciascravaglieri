@@ -2567,32 +2567,52 @@ body:not([class*=elementor-page-]) .site-main,
   border-color: var(--scrav-primary);
 }
 
-/* Box Unico Orizzontale Preparazioni Galeniche */
+/* Banner Compatto Orizzontale Preparazioni Galeniche */
 .scrav-galenica-single-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: #f3fbfe;
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 190px;
+  background-color: var(--scrav-secondary);
   border-radius: 18px;
   overflow: hidden;
-  margin: 42px auto 0;
-  max-width: 1020px;
-  box-shadow: 0 10px 30px rgba(0, 72, 97, 0.07);
-  border: 1px solid #dcf1f9;
+  margin: 32px auto 0;
+  max-width: 100%;
+  box-shadow: 0 12px 30px rgba(0, 72, 97, 0.14);
+  border: 1px solid rgba(0, 163, 200, 0.25);
 }
 
 .scrav-galenica-img-col {
-  position: relative;
-  min-height: 310px;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
   overflow: hidden;
   display: block;
+  z-index: 0;
+}
+
+.scrav-galenica-img-col::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 52, 72, 0.92) 0%,
+    rgba(0, 72, 97, 0.82) 55%,
+    rgba(0, 115, 145, 0.52) 100%
+  );
+  z-index: 1;
 }
 
 .scrav-galenica-img-col img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
+  object-position: center 45% !important;
   display: block;
-  transition: transform 0.45s ease;
+  transition: transform 0.55s ease;
 }
 
 .scrav-galenica-single-box:hover .scrav-galenica-img-col img {
@@ -2600,70 +2620,91 @@ body:not([class*=elementor-page-]) .site-main,
 }
 
 .scrav-galenica-text-col {
-  padding: 42px 44px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 34px 44px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  column-gap: 32px;
+  row-gap: 8px;
+  align-items: center;
 }
 
 .scrav-galenica-text-col h3 {
+  grid-column: 1;
+  grid-row: 1;
   font-size: 1.45rem;
   font-weight: 800;
   text-transform: uppercase;
-  color: #1e293b;
-  margin: 0 0 14px;
+  color: #ffffff;
+  margin: 0;
   letter-spacing: 0.02em;
 }
 
 .scrav-galenica-text-col h3 a {
-  color: inherit !important;
+  color: #ffffff !important;
   text-decoration: none;
 }
 
 .scrav-galenica-text-col p {
-  font-size: 1.08rem;
-  line-height: 1.65;
-  color: #334155;
-  margin: 0 0 26px;
+  grid-column: 1;
+  grid-row: 2;
+  font-size: 1.04rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0;
+  max-width: 680px;
 }
 
 .scrav-btn-galenica-primary {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  justify-self: end;
+  white-space: nowrap;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: #1e88e5;
-  color: #ffffff !important;
+  background-color: #ffffff;
+  color: var(--scrav-secondary) !important;
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 14px 28px;
   border-radius: 8px;
   text-decoration: none !important;
-  box-shadow: 0 4px 14px rgba(30, 136, 229, 0.3);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
   transition: all 0.25s ease;
 }
 
 .scrav-btn-galenica-primary:hover {
-  background-color: var(--scrav-secondary);
+  background-color: var(--scrav-primary);
+  color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 72, 97, 0.28);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
 }
 
 @media (max-width: 991px) {
   .scrav-photo-grid-3 {
     grid-template-columns: repeat(2, 1fr);
   }
-  .scrav-galenica-single-box {
-    grid-template-columns: 1fr;
-  }
-  .scrav-galenica-img-col {
-    min-height: 250px;
-  }
   .scrav-galenica-text-col {
-    padding: 30px 26px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 28px 26px;
+    row-gap: 12px;
+  }
+  .scrav-galenica-text-col p {
+    grid-row: 2;
+  }
+  .scrav-btn-galenica-primary {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: start;
+    margin-top: 4px;
   }
 }
 
