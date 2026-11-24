@@ -3177,6 +3177,142 @@ body:not([class*=elementor-page-]) .site-main,
   }
 }
 
+/* ==========================================================================
+   AGGIORNAMENTI 24/11/2026: HOME 2 CARD (MAGNETOTERAPIA & MEDYBOX),
+   VIDEO THERAPIST, CATEGORIE MEDYBOX E BADGE COSTO CUP
+   ========================================================================== */
+.scrav-photo-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.scrav-photo-card-img-link.is-contain {
+  height: 260px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 10px;
+}
+
+.scrav-photo-card-img-link.is-contain img {
+  object-fit: contain !important;
+}
+
+.scrav-photo-card-desc {
+  font-size: 0.94rem;
+  color: var(--scrav-body);
+  line-height: 1.55;
+  margin: -10px 0 20px;
+}
+
+@media (max-width: 767px) {
+  .scrav-photo-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Badge costo servizio CUP */
+.scrav-fee-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--scrav-primary-light);
+  color: var(--scrav-secondary);
+  border: 1px solid rgba(0, 163, 200, 0.35);
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 18px 0 8px;
+}
+
+.scrav-fee-badge i {
+  color: var(--scrav-primary);
+  font-size: 1.1rem;
+}
+
+/* Pagina Magnetoterapia: Video Box */
+.scrav-video-box {
+  margin: 28px 0;
+  background: #f8fafc;
+  border: 1px solid var(--scrav-border);
+  border-radius: var(--scrav-radius-md);
+  padding: 22px;
+}
+
+.scrav-video-box h3 {
+  margin: 0 0 12px !important;
+  font-size: 1.18rem;
+  color: var(--scrav-secondary);
+}
+
+.scrav-video-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0f172a;
+  box-shadow: var(--scrav-shadow-md);
+}
+
+.scrav-video-wrap video {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 440px;
+}
+
+.scrav-video-caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+  font-size: 0.92rem;
+  color: var(--scrav-body);
+}
+
+/* Pagina MedyBOX 24h: Griglia 6 categorie */
+.scrav-medybox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin: 24px 0 28px;
+}
+
+.scrav-medybox-card {
+  background: #f8fafc;
+  border: 1px solid var(--scrav-border);
+  border-top: 3px solid var(--scrav-accent);
+  border-radius: var(--scrav-radius-md);
+  padding: 20px;
+}
+
+.scrav-medybox-card h3 {
+  margin: 0 0 8px !important;
+  font-size: 1.05rem;
+  color: var(--scrav-secondary);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.scrav-medybox-card h3 i {
+  color: var(--scrav-accent);
+}
+
+.scrav-medybox-card p {
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.55;
+  color: var(--scrav-body);
+}
+
+@media (max-width: 767px) {
+  .scrav-medybox-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 
